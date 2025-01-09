@@ -29,5 +29,45 @@ fun main() {
     println(changingValue)
     println(changingValue.javaClass)
 
+    /*
+     Functions -
+     */
+
+    fun addNumbers(): Int{
+        return 80+6
+    }
+    fun newAndImprovedAddNumbers(a: Int, b: Int): Int{
+        return a + b
+    }
+
+    fun newAndImprovedAddNumbers2(a: Double, b: Double) = a + b
+
+    //println(addNumbers())
+    println(newAndImprovedAddNumbers(2, 3))
+    println(newAndImprovedAddNumbers(10, 20))
+    println(newAndImprovedAddNumbers2(2.0,5.6))
+
+    println(newAndImprovedAddNumbers2(b=7.7,a=2.3))
+
+    // Input list of grades
+    val grades = listOf(2.0, 2.5, 3.0, 3.5, 4.0, 4.5)
+
+    // Mapping numeric grades to letter grades
+    val letterGrades = grades.map { grade ->
+        when (grade) {
+            2.0 -> "C"
+            2.5 -> "C+"
+            3.0 -> "B"
+            3.5 -> "B+"
+            4.0 -> "A"
+            4.5 -> "A+"
+            else -> "Unknown" // Handle unexpected values
+        }
+    }
+
+    // Print the resulting letter grades
+    println(letterGrades) // Output: [C, C+, B, B+, A, A+]
+
+
 
 }
