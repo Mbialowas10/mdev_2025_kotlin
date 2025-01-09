@@ -68,6 +68,35 @@ fun main() {
     // Print the resulting letter grades
     println(letterGrades) // Output: [C, C+, B, B+, A, A+]
 
+    // Example usage
+    val result1 = sumNumbers(1, 3, 5)
+    val result2 = sumNumbers(4, 5, 6, 7)
+
+    println("Sum 1: $result1") // Output: Sum 1: 9
+    println("Sum 2: $result2") // Output: Sum 2: 22
+
+    val sub = {a:Int,b:Int -> a-b} // anonymous function
+    hof(sub)
+
+} // end main function
 
 
+val addNumber = fun(a:Int, b:Int):Int{
+    return a + b
 }
+
+fun sumNumbers(vararg numbers: Int): Int {
+    return numbers.sum()
+}
+
+
+
+fun hof(subtraction: (Int,Int)-> Int){
+    val result = subtraction(6,4) // this is a way to invoke function within hof function
+    println(result)
+}
+
+
+
+
+
