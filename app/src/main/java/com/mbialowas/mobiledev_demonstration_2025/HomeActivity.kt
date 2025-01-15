@@ -34,7 +34,12 @@ class HomeActivity : AppCompatActivity() {
         }
 
     }
-
+    /*
+        Purpose: replaces a fragment with another fragment
+        args: fragment Fragment
+        returns: unit
+        throws:
+     */
     private fun replaceFragment(fragment: Fragment) {
         Log.i("mjb", "fragment method being called.")
         supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, fragment)
